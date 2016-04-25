@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+	<title>Stardust Server</title>
+	<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+<body>
+	Hello world!
+	<form onsubmit='event.preventDefault(); sqrt(num);'>
+		<input type='number' name='num' value='34'>
+		<input type='submit'>
+	</form><br>
+	<iframe id='sqrt' src="/cgi-bin/test.py?num=55" align="center" width="520" height="360"></iframe>
+</body>
+<script>
+	function sqrt(num)
+	{
+		document.getElementById('sqrt').src=('/cgi-bin/test.py?num='+num.value);
+	}
+</script>
